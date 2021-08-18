@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>JavaScript Practice</title>
+    <style>
+     .container {
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       flex-flow: column;
+       justify-content: center;
+       align-items: center;
+     }
+     .row {
+       width: 500px;
+       padding: 20px 0;
+       margin: 10px 0;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+	<input id="fname" name="fname" type="text" placeholder="First Name"/>
+	<input id="lname" name="lname" type="text" placeholder="Last Name"/>
+      </div>
+      <div class="row">
+	<button id="r-btn">First Name</button>
+	<button id="l-btn">Last Name</button>
+	<button id="full-name">Full Name</button>
+      </div>
+    </div>
+    <script>
+     let fname;
+     let lname;
+     
+     document.getElementById('r-btn').addEventListener('click', function (){
+       fname = document.getElementById('fname').value;
+       console.log(fname);
+     });
+     document.getElementById('l-btn').addEventListener('click', function (){
+       lname = document.getElementById('lname').value;
+       console.log(lname);
+     });
+     document.getElementById('full-name').addEventListener('click', function (){
+       const fullName = fname + " " + lname;
+       console.log(fullName);
+     });
+    </script>
+  </body>
+</html>
